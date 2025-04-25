@@ -10,16 +10,13 @@ interface LeftSidebarProps {
 export const LeftSidebar = ({ isOpen }: LeftSidebarProps) => {
   return (
     <div
-      className={`top-0 left-0 h-screen bg-white shadow-2xl overflow-hidden
-        transition-all duration-300 ${isOpen ? 'w-64' : 'w-0'}`}
+      className={`bg-white shadow-2xl whitespace-nowrap
+        transition-[width] duration-300 flex-shrink-0
+        ${isOpen ? 'w-64' : 'w-0'}`}
     >
       <div className="flex flex-col h-full">
-        <div>
-          <LeftSidebarHeader />
-        </div>
-        <div>
-          <LeftSidebarMenu />
-        </div>
+        <LeftSidebarHeader />
+        <LeftSidebarMenu />
       </div>
     </div>
   );

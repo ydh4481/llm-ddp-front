@@ -1,10 +1,10 @@
 // src/lib/api/types.ts
 type Method = 'GET' | 'POST' | 'PUT' | 'DELETE';
 
-export interface ApiOptions extends RequestInit {
+export interface ApiOptions extends Omit<RequestInit, 'body'> {
   method?: Method;
   params?: Record<string, string | number | boolean>;
-  data?: Record<string, string | number | boolean | null>;
+  body?: unknown;
 }
 
 export interface ApiResponse<T> {

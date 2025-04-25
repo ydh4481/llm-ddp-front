@@ -1,7 +1,8 @@
 export interface Database {
   id: number;
-  eng_name: string;
-  kor_name: string;
+  name: string;
   description: string;
   connection_info: string;
+  db_type: string;
+  init_step: number;
 }

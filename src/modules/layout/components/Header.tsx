@@ -1,6 +1,6 @@
 'use client';
 
-import { DensityMediumOutlined } from '@mui/icons-material';
+import DehazeIcon from '@mui/icons-material/Dehaze';
 import { IconButton } from '@mui/material';
 interface HeaderProps {
   onToggleSidebar: () => void;
@@ -8,9 +8,9 @@ interface HeaderProps {
 
 export const Header = ({ onToggleSidebar }: HeaderProps) => {
   return (
-    <div className="mb-[2rem] flex items-center justify-between">
+    <div className="mb-[1rem] flex items-center justify-between">
       <IconButton aria-label="toggle-sidebar" onClick={onToggleSidebar} size={'small'}>
-        <DensityMediumOutlined />
+        <DehazeIcon />
       </IconButton>{' '}
     </div>
   );

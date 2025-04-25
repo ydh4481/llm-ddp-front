@@ -2,7 +2,7 @@
 
 'use client';
 
-import { Button, Dialog, DialogActions, DialogContent, DialogTitle } from '@mui/material';
+import { Box, Button, Dialog, DialogActions, DialogContent, DialogTitle } from '@mui/material';
 
 interface GlobalModalProps {
   open: boolean;
@@ -13,9 +13,11 @@ interface GlobalModalProps {
 
 export const GlobalModal = ({ open, title, content, onClose }: GlobalModalProps) => {
   return (
-    <Dialog fullWidth maxWidth="sm" onClose={onClose} open={open}>
+    <Dialog fullWidth maxWidth="lg" onClose={onClose} open={open}>
       <DialogTitle>{title}</DialogTitle>
-      <DialogContent dividers>{content}</DialogContent>
+      <DialogContent dividers>
+        <Box>{content}</Box>
+      </DialogContent>
       <DialogActions>
         <Button onClick={onClose}>닫기</Button>
       </DialogActions>
